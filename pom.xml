@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Hellospring</groupId>
+  <artifactId>Hellospring</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <!-- Properties, 버전을 변수로 만들어 편리하게 관리함 -->
+  <properties>
+  	<org.springframework-version>5.3.10</org.springframework-version>
+  </properties>
+  <!-- Build setting -->
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <!-- Dependencies -->
+<dependencies>
+  <!-- Spring Context -->
+  <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+  <dependency>
+  	<groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>${org.springframework-version}</version>
+  </dependency>
+
+ 
+ <!-- Spring Web -->
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+ <dependency>
+	<groupId>org.springframework</groupId>
+    <artifactId>spring-web</artifactId>
+    <version>${org.springframework-version}</version>
+ </dependency>
+ 
+ <!-- Spring WebMVC -->
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>${org.springframework-version}</version>
+</dependency>
+
+</dependencies>
+</project>
+ 
