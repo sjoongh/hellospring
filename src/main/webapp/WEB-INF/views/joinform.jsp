@@ -15,5 +15,6 @@
 		
 		<input type="submit" value="가입" />
 	</form>
+
 </body>
 </html>

@@ -18,6 +18,9 @@ public class HelloController {
 		ModelAndView mav = new ModelAndView();
 		
 		// 객체 추가: 서블릿에서 addAttribute의 역할
+		// key=message가 value=Hello World를 저장
+		// name은 url을 통해 값을 입력해줌
+		// name의 값이 null일 경우 spring에서 감지해 오류 발생		
 		mav.addObject("message",	// 키
 				"Hello, " + name);	// 값
 		// 뷰파일을 연결: 서블릿에서 RequestDispatcher로 포워드한 것과 비슷
