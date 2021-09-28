@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.hellospring.vo.UserVo;
 
-// RequestMapping (Type + Method)
+//	RequestMapping ( Type + Method )
 @RequestMapping("/user")
 @Controller
 public class UserController {
@@ -21,18 +21,18 @@ public class UserController {
 //	public String join(@RequestParam String name,
 //						@RequestParam String email,
 //						@RequestParam String password) {
-//		System.out.println("name" + name);
-//		System.out.println("email" + email);
-//		System.out.println("password" + password);
+//		System.out.println("name:" + name);
+//		System.out.println("email:" + email);
+//		System.out.println("password:" + password);
 	public String join(@ModelAttribute UserVo vo) {
-		System.out.println("폼으로부터 전송받은 DTO:"+vo);
-		// 리다이렉트
+		System.out.println("폼으로부터 전송받은 DTO:" + vo);
+		//	리다이렉트
 		return "redirect:/user/joinsuccess";
 	}
 	
 	@ResponseBody
 	@RequestMapping("/joinsuccess")
-	public String joinsucess() {
+	public String joinsuccess() {
 		return "<h1>JOIN SUCCESS</h1>";
 	}
 }
